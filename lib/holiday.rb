@@ -79,7 +79,8 @@ def all_holidays_with_bbq(holiday_hash)
     bbq_key_array = []
     holiday_hash.map do |seasons, holidays|
       holidays.map do |holidays, items|
-        if items == "BBQ"
+        items.map do |item|
+          item == "BBQ"
           bbq_key_array.push(holidays)
         end
       end
